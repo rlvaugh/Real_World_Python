@@ -8,16 +8,14 @@ Ro_Y = -85  # Ship starting position y coordinate.
 Vo_X = 485  # Ship translunar injection velocity x component.
 Vo_Y = 0  # Ship translunar injection velocity y component.
 
+
 class GravSys():
     """Runs a gravity simulation on n-bodies."""
-    
-  
+   
     def __init__(self):
         self.bodies = []
         self.t = 0
-        self.dt = 0.001
-
-                   
+        self.dt = 0.001                
             
     def sim_loop(self):
         """Loop bodies in a list through time steps."""
@@ -40,8 +38,6 @@ class Body(Turtle):
         #self.resizemode("user")
         #self.pendown()  # Uncomment to draw path behind object.
         
-
-        
     def acc(self):
         """Calculate combined force on body and return vector components."""
         a = Vec(0, 0)
@@ -49,9 +45,7 @@ class Body(Turtle):
             if body != self:
                 r = body.pos() - self.pos()
                 a += (G * body.mass / abs(r)**3) * r  # Units: dist/time^2.
-        return a
-    
-    
+        return a    
     
     def step(self):
         """Calculate position, orientation, and velocity of a body."""
