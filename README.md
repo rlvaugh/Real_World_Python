@@ -10,6 +10,7 @@ A print/eBook bundle can be purchased directly from the publisher at https://nos
 
 # Download the Chapters
 To download the chapter folders, use the green “Code” button near the top of the repository code page.
+
 ![image](https://user-images.githubusercontent.com/31315095/86478653-31bfc800-bd10-11ea-80fa-388234db9282.png)
 
 # Versioning
