@@ -10,8 +10,14 @@ A print/eBook bundle can be purchased directly from the publisher at https://nos
 
 # Download the Chapters
 To download the chapter folders, use the green “Code” button near the top of the repository code page.
+![image](https://user-images.githubusercontent.com/31315095/86478653-31bfc800-bd10-11ea-80fa-388234db9282.png)
 
+# Versioning
+The book uses Python 3.7.
 
-Code and supporting files for the book "Real World Python" by Lee Vaughan, published by the No Starch Press.
-For updates and errata, visit https://nostarch.com/real-world-python/ 
-Please report typos and mistakes to errata@nostarch.com
+# Errata
+For updates and errata, visit https://nostarch.com/real-world-python/. Please report typos and mistakes to errata@nostarch.com.
+
+ # Other Books by the Author
+Impractical Python Projects: Playful Programming Activities to Make You Smarter
+
