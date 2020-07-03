@@ -6,7 +6,7 @@ This repository contains the source code and supporting files for the book *Real
 
 # Get the Book
 The book is available at retail bookstores like Barnes & Noble and from online sellers like https://www.amazon.com/. 
-A print/eBook bundle can be purchased directly from the publisher at https://nostarch.com/.
+A print/eBook bundle can be purchased directly from the publisher at https://nostarch.com/real-world-python/.
 
 # Download the Chapters
 To download the chapter folders, use the green “Code” button near the top of the repository code page.
@@ -20,5 +20,5 @@ The book uses Python 3.7.
 For updates and errata, visit https://nostarch.com/real-world-python/. Please report typos and mistakes to errata@nostarch.com.
 
  # Other Books by the Author
-Impractical Python Projects: Playful Programming Activities to Make You Smarter
+[*Impractical Python Projects: Playful Programming Activities to Make You Smarter*](https://nostarch.com/impracticalpythonprojects)
 
