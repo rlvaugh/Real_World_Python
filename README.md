@@ -17,7 +17,7 @@ To download the chapter folders, use the green “Code” button near the top of
 The book uses Python 3.7.
 
 ## Errata
-For updates and errata, visit https://nostarch.com/real-world-python/. Please report typos and mistakes to errata@nostarch.com.
+For updates and errata, visit https://nostarch.com/real-world-python/. Please report typos and other issues to errata@nostarch.com.
 
 ## Project Gutenberg
 These source files include ebooks from Project Gutenberg. These ebooks are for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever. You may copy them, give them away or re-use them under the terms of the Project Gutenberg License included with the eBooks or online at www.gutenberg.org. If you are not located in the United States, you'll have to check the laws of the country where you are located before using the ebooks.
