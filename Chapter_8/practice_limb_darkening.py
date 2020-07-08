@@ -7,10 +7,12 @@ IMG_WIDTH = 500
 BLACK_IMG = cv.imread('limb_darkening.png', cv.IMREAD_GRAYSCALE)
 EXO_RADIUS = 7
 EXO_DX = 3
+EXO_START_X = 40
+EXO_START_Y = 230
 NUM_FRAMES = 145
 
 def main():
-    intensity_samples = record_transit(exo_x=40, exo_y=230)
+    intensity_samples = record_transit(EXO_START_X, EXO_START_Y)
     relative_brightness = calc_rel_brightness(intensity_samples)
     plot_light_curve(relative_brightness)
     
