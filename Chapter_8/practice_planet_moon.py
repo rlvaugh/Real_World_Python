@@ -10,10 +10,12 @@ BLACK_IMG = np.zeros((IMG_HT, IMG_WIDTH, 1), dtype='uint8')
 STAR_RADIUS = 200
 EXO_RADIUS = 20
 MOON_RADIUS = 5
+EXO_START_X = 20
+EXO_START_Y = 250
 NUM_DAYS = 200 # number days in year
 
 def main():
-    intensity_samples = record_transit(exo_x=20, exo_y=250)  # Starting x,y
+    intensity_samples = record_transit(EXO_START_X, EXO_START_Y)
     relative_brightness = calc_rel_brightness(intensity_samples)
     print('\nestimated exoplanet radius = {:.2f}\n'
           .format(STAR_RADIUS * math.sqrt(max(relative_brightness)
