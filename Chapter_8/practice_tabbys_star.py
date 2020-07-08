@@ -8,10 +8,12 @@ IMG_WIDTH = 500
 BLACK_IMG = np.zeros((IMG_HT, IMG_WIDTH), dtype='uint8')
 STAR_RADIUS = 165
 EXO_DX = 3
+EXO_START_X = -250
+EXO_START_Y = 150
 NUM_FRAMES = 500
 
 def main():
-    intensity_samples = record_transit(exo_x=-250, exo_y=150)
+    intensity_samples = record_transit(EXO_START_X, EXO_START_Y)
     rel_brightness = calc_rel_brightness(intensity_samples)
     plot_light_curve(rel_brightness)
     
