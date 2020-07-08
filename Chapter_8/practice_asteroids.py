@@ -9,16 +9,15 @@ BLACK_IMG = np.zeros((400, 500, 1), dtype="uint8")
 NUM_ASTEROIDS = 15
 NUM_LOOPS = 170
 
+
 class Asteroid():
     """Draws a circle on an image that represents an asteroid."""
     
-
     def __init__(self, number):
         self.radius = random.choice((1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3))
         self.x = random.randint(-30, 60)
         self.y = random.randint(220, 230)
         self.dx = 3  
-
 
     def move_asteroid(self, image):
         """Draw and move asteroid object."""
