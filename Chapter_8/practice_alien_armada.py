@@ -9,10 +9,10 @@ BLACK_IMG = np.zeros((400, 500, 1), dtype="uint8")
 NUM_SHIPS = 5
 NUM_LOOPS = 300  # Number of simulation frames to run
 
+
 class Ship():
     """Draws and moves a ship object on an image."""
     
-
     def __init__(self, number):
         self.number = number
         self.shape = random.choice(['>>>|==H[X)',
@@ -23,7 +23,6 @@ class Ship():
         self.y = random.randint(80, 350)
         self.dx = random.randint(2, 4)
         
-
     def move_ship(self, image):
         """Draws and moves ship object."""
         font = cv.FONT_HERSHEY_PLAIN
@@ -36,7 +35,6 @@ class Ship():
                    thickness=5) 
         self.x += self.dx
         
-
 def record_transit(start_image):
     """Runs simulation and returns list of intensity measurements per frame."""
     ship_list = []
@@ -58,6 +56,7 @@ def record_transit(start_image):
         cv.waitKey(50)
     cv.destroyAllWindows()
     return intensity_samples
+
 
 def calc_rel_brightness(image):
     """Return list of relative brightness measurments for planetary transit."""
