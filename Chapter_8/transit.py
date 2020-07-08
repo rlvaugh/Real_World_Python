@@ -10,10 +10,12 @@ BLACK_IMG = np.zeros((IMG_HT, IMG_WIDTH), dtype='uint8')
 STAR_RADIUS = 165
 EXO_RADIUS = 7
 EXO_DX = 3
+EXO_START_X = 40
+EXO_START_Y = 230
 NUM_FRAMES = 145
 
 def main():
-    intensity_samples = record_transit(exo_x=40, exo_y=230)  # Starting x, y.
+    intensity_samples = record_transit(EXO_START_X, EXO_START_Y)
     relative_brightness = calc_rel_brightness(intensity_samples)
     print('\nestimated exoplanet radius = {:.2f}\n'
           .format(STAR_RADIUS * math.sqrt(max(relative_brightness)
