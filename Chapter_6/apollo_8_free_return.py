@@ -2,7 +2,7 @@ from turtle import Shape, Screen, Turtle, Vec2D as Vec
 
 # User input:
 G = 8  # Gravitational constant used for the simulation.
-NUM_LOOPS = 4100  # Number of time steps in simulation.
+NUM_LOOPS = 4100  # Number of time steps in the simulation.
 Ro_X = 0  # Ship starting position x coordinate.
 Ro_Y = -85  # Ship starting position y coordinate.
 Vo_X = 485  # Ship translunar injection velocity x component.
