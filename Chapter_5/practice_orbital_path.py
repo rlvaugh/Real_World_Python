@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import cv2 as cv
 
-PAD = 5  # Ignore pixels this distance from edge
+PAD = 5  # Ignore pixels this distance from edge.
 
 def find_transient(image, diff_image, pad):
     """Takes image, difference image, and pad value in pixels and returns
