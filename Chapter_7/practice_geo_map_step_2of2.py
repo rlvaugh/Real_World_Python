@@ -7,7 +7,6 @@ import cv2 as cv
 # CONSTANTS: User Input:
 IMG_GRAY = cv.imread('mola_1024x512_200mp.jpg', cv.IMREAD_GRAYSCALE)
 IMG_GEO = cv.imread('geo_thresh.jpg', cv.IMREAD_GRAYSCALE)
-IMG_GRAY_GEO = IMG_GRAY * IMG_GEO
 IMG_COLOR = cv.imread('mola_color_1024x506.png')
 RECT_WIDTH_KM = 670  # Site rectangle width in kilometers.
 RECT_HT_KM = 335  # Site rectangle height in kilometers.
@@ -18,6 +17,7 @@ NUM_CANDIDATES = 20  # Number of candidate landing sites to display.
 #------------------------------------------------------------------------------
 
 # CONSTANTS: Derived and fixed:
+IMG_GRAY_GEO = IMG_GRAY * IMG_GEO
 IMG_HT, IMG_WIDTH = IMG_GRAY.shape
 MARS_CIRCUM = 21344  # Circumference in kilometers.
 PIXELS_PER_KM = IMG_WIDTH / MARS_CIRCUM
