@@ -81,21 +81,12 @@ def make_dict(word_list, shift):
         word_dict[word].append(index + shift)
     return word_dict
 
-def make_letter_dictQC(firstLetterDict):
-    sm = 0
-    for letter in firstLetterDict.keys():
-        sm += len(firstLetterDict[letter])
-##        print(repr(letter), len(firstLetterDict[letter]))
-##    print('Words starting with numbers are not counted...\n')
-    return
-
 def make_letter_dict(word_list):
     firstLetterDict = defaultdict(list)
     for word in word_list:
         if len(word) > 0:
             if word[0].isalpha():
                 firstLetterDict[word[0]].append(word)
-    make_letter_dictQC(firstLetterDict)
     return firstLetterDict
 
 def encrypt(message, word_dict, letter_dict):
