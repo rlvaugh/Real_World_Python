@@ -12,7 +12,7 @@ EXO_RADIUS = 20
 MOON_RADIUS = 5
 EXO_START_X = 20
 EXO_START_Y = 250
-NUM_DAYS = 200 # number days in year
+NUM_DAYS = 200  # number days in year
 
 def main():
     intensity_samples = record_transit(EXO_START_X, EXO_START_Y)
