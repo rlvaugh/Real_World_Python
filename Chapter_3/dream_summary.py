@@ -13,7 +13,7 @@ def main():
     soup = bs4.BeautifulSoup(page.text, 'html.parser')
     p_elems = [element.text for element in soup.find_all('p')]
 
-    speech = ''.join(p_elems)
+    speech = ' '.join(p_elems)  # Make sure to join on a space!
 
     # Fix typos, remove extra spaces, digits, and punctuation.
     speech = speech.replace(')mowing', 'knowing')
