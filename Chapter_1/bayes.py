@@ -224,7 +224,7 @@ def main():
         print("E1 = {:.3f}, E2 = {:.3f}, E3 = {:.3f}"
               .format(app.sep1, app.sep2, app.sep3))
 
-        # Print target probabilities if sailor not found else show position.
+        # Print target probabilities if sailor is not found else show position.
         if results_1 == 'Not Found' and results_2 == 'Not Found':
             print("\nNew Target Probabilities (P) for Search {}:"
                   .format(search_num + 1))
