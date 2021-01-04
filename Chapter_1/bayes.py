@@ -231,7 +231,7 @@ def main():
             print("P1 = {:.3f}, P2 = {:.3f}, P3 = {:.3f}"
                   .format(app.p1, app.p2, app.p3))
         else:
-            cv.circle(app.img, (sailor_x.item(0), sailor_y.item(0)), 3, (255, 0, 0), -1)
+            cv.circle(app.img, (sailor_x[0], sailor_y[0]), 3, (255, 0, 0), -1)
             cv.imshow('Search Area', app.img)
             cv.waitKey(1500)
             main()
