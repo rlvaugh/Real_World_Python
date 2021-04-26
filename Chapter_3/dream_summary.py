@@ -1,6 +1,6 @@
 """
 Gensim 4.0, released March 25, 2021, dropped the Summarization module.
-To run this program install Gensim 3.8x (https://pypi.org/project/gensim/3.8.1/)
+To run this program install Gensim 3.8.3 (https://pypi.org/project/gensim/3.8.3/)
 """
 
 from collections import Counter
