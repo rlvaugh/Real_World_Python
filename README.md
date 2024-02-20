@@ -24,4 +24,4 @@ These source files include ebooks from Project Gutenberg. These ebooks are for t
 
 ## Other Books by the Author
 [*Impractical Python Projects: Playful Programming Activities to Make You Smarter*](https://nostarch.com/impracticalpythonprojects)
-
+[*Python Tools for Scientists: An Introduction to Using Anaconda, JupyterLab, and Python's Scientific Libraries*](https://a.co/d/8HeRgzs)
