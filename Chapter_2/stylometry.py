@@ -1,6 +1,11 @@
+# NOTE: The stopwords and parts of speech functions 
+# changed with the 3rd printing of the book.
+
+
+from collections import Counter
+import matplotlib.pyplot as plt
 import nltk
 from nltk.corpus import stopwords
-import matplotlib.pyplot as plt
 
 LINES = ['-', ':', '--']  # Line style for plots.
 
@@ -67,42 +72,46 @@ def word_length_test(words_by_author, len_shortest_corpus):
 
 def stopwords_test(words_by_author, len_shortest_corpus):
     """Plot stopwords freq by author, truncated to shortest corpus length."""
-    stopwords_by_author_freq_dist = dict()
+    fdist = dict()
     plt.figure(2) 
-    stop_words = set(stopwords.words('english'))  # Use set for speed.
-    #print('Number of stopwords = {}\n'.format(len(stop_words)))
-    #print('Stopwords = {}\n'.format(stop_words))
+    stop_words = stopwords.words('english')
+
     for i, author in enumerate(words_by_author):
         stopwords_by_author = [word for word in words_by_author[author]
-                               [:len_shortest_corpus] if word in stop_words]    
-        stopwords_by_author_freq_dist[author] = nltk.FreqDist(stopwords_by_author)    
-        stopwords_by_author_freq_dist[author].plot(50,
-                                                   label=author,
-                                                   linestyle=LINES[i],
-                                                   title=
-                                                   '50 Most Common Stopwords')
+                               [:len_shortest_corpus] if word in stop_words]
+        fdist[author] = {word: stopwords_by_author.count(word) for word in
+                         stop_words[:50]}  # Use first 50 of 179 stopwords.
+        k, v = list(fdist[author].keys()), list(fdist[author].values())
+        plt.plot(k, v, label=author, linestyle=LINES[i], lw=1)
+        
+##    plt.xticks([])  # Turn off labels if plotting >50 stopwords.
+    plt.title('First 50 Stopwords')
     plt.legend()
-##    plt.show()  # Uncomment to see plot while coding function.
+    plt.xticks(rotation=90)    
+##    plt.show()
 
 def parts_of_speech_test(words_by_author, len_shortest_corpus):
     """Plot author use of parts-of-speech such as nouns, verbs, adverbs,etc."""
-    by_author_pos_freq_dist = dict()
+    fdist = dict()
+    colors = ['k', 'lightgrey', 'grey']
     plt.figure(3)
+    
     for i, author in enumerate(words_by_author):
         pos_by_author = [pos[1] for pos in nltk.pos_tag(words_by_author[author]
-                                                        [:len_shortest_corpus])] 
-        by_author_pos_freq_dist[author] = nltk.FreqDist(pos_by_author)
-        by_author_pos_freq_dist[author].plot(35,
-                                             label=author,
-                                             linestyle=LINES[i],
-                                             title='Part of Speech')
+                                                        [:len_shortest_corpus])]
+        fdist[author] = Counter(pos_by_author)
+        k, v = list(fdist[author].keys()), list(fdist[author].values())
+        plt.plot(k, v, linestyle='', marker='^', c=colors[i], label=author)
+        
+    plt.title('Parts of Speech')
     plt.legend()
-    plt.show()
-    # Windows PowerShell users may need plt.show(block=True).
-                       
+    plt.xticks(rotation=90)
+##    plt.show()
+                                     
 def vocab_test(words_by_author):
     """Compare author vocabularies using the Chi Squared statistical test."""
     chisquared_by_author = dict()
+
     for author in words_by_author:
         if author != 'unknown': 
             # Combine corpus for author & unknown & find 1000 most-common words.
