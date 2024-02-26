@@ -12,4 +12,5 @@ tokens = nltk.word_tokenize(corpus)
 tokens = nltk.Text(tokens)  # NLTK wrapper for automatic text analysis.
 words = ['Holmes', 'Watson', 'Mortimer', 'Henry', 'Barrymore', 'Stapleton', 'Selden', 'hound']
 ax = dispersion_plot(tokens, words)
+# Correct current bug in NLTK dispersion_plot that reverses label order by mistake:
 ax.set_yticks(list(range(len(words))), reversed(words), color="C0")
