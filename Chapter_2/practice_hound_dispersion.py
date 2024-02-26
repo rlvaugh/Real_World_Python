@@ -1,17 +1,15 @@
 """Use NLP (nltk) to make dispersion plot."""
-import nltk
-import file_loader
+import matplotlib.pyplot as plt
+from nltk.draw.dispersion import dispersion_plot
+    
+def text_to_string(filename):
+    """Read a text file and return a string."""
+    with open(filename) as infile:
+        return infile.read()
 
-corpus = file_loader.text_to_string('hound.txt')
+corpus = text_to_string('hound.txt')
 tokens = nltk.word_tokenize(corpus)
 tokens = nltk.Text(tokens)  # NLTK wrapper for automatic text analysis.
-
-dispersion = tokens.dispersion_plot(['Holmes',
-                                     'Watson',
-                                     'Mortimer',
-                                     'Henry',
-                                     'Barrymore',                                                                        
-                                     'Stapleton',
-                                     'Selden',
-                                     'hound'])
-
+words = ['Holmes', 'Watson', 'Mortimer', 'Henry', 'Barrymore', 'Stapleton', 'Selden', 'hound']
+ax = dispersion_plot(tokens, words)
+ax.set_yticks(list(range(len(words))), reversed(words), color="C0")
