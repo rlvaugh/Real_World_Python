@@ -6,6 +6,8 @@ import cv2 as cv
 
 MAP_FILE = 'cape_python.png'
 
+print("INI bayes.py")
+
 # Assign search area (SA) corner point locations based on image pixels.
 SA1_CORNERS = (130, 265, 180, 315)  # (UL-X, UL-Y, LR-X, LR-Y)
 SA2_CORNERS = (80, 255, 130, 305)   # (UL-X, UL-Y, LR-X, LR-Y)
